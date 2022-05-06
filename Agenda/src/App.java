@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Agenda.src.Contato;
+
 public class App extends Contato{
 
-    public void push (Contato contato){
-        
-    }
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayList<Contato> contato = new ArrayList<>();
+
+        Contato contato = new Contato();
+        ArrayList<Contato> contatos = new ArrayList<>();
 
         int opcao = 0;
 
@@ -31,46 +32,54 @@ public class App extends Contato{
 
             switch (opcao) {
                 case 1:
-                //
-
-                Contato contatos = new Contato();
+                //Adicionar contato
                 
                 System.out.println("Insira o nome do contato");
-                contatos.setNome(scanner.next());
+                contato.setNome(scanner.next());
 
                 System.out.println("Insira o número");
-                contatos.setTelefone(scanner.next());
+                contato.setTelefone(scanner.next());
 
                 System.out.println("Insira o endereço de e-mail");
-                contatos.setEmail(scanner.next());
+                contato.setEmail(scanner.next());
 
                 System.out.println();
+
+                contatos.add(contato);
 
                 break;
 
                 case 2:
-                //
+                //Alterar contato
+
                 break;
 
                 case 3:
-                //
+                //Desfazer última alteração do contato
+
                 break;
 
                 case 4:
-                //
+                //Excluir contato
+
                 break;
 
                 case 5:
-                //
+                //Exibir contatos
 
-
+                System.out.println();
+                System.out.print(contatos.toString());
+                System.out.println();
                 break;
 
                 case 6:
+                //Sair
+
                 System.out.println("Programa encerrado.");
                 break;
 
                 default:
+                //Número inválido
                 System.out.println("Você digitou uma opção inválida. Tente novamente.\n");
             }
         }

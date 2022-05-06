@@ -8,36 +8,36 @@ public class Contato {
     private String email;
     
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public String getTelefone() {
-        return telefone;
+        return this.telefone;
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
 
     public void setNome(String nome){
-
+        this.nome = nome;
     }
 
     public void setTelefone(String nome){
-        
+        this.telefone = telefone;
     }
 
     public void setEmail(String nome){
-        
+        this.email = email;
     }
-
+    
     public String toString(){
-        return "id: " + id + "Nome: " + nome + "Telefone: " + telefone + "Email: " + email;
+        return "id: " + id + " " + "Nome: " + nome + " " + "Telefone: " + telefone + " " + "Email: " + email;
     }
 
 
