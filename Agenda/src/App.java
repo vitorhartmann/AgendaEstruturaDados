@@ -1,15 +1,19 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Agenda.src.Contato;
+public class App extends Contato{
 
-public class App {
+    public void push (Contato contato){
+        
+    }
+
     public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         ArrayList<Contato> contato = new ArrayList<>();
 
         int opcao = 0;
+
 
         while (opcao != 6 ){
             System.out.println("Escolha uma opção");
@@ -22,12 +26,26 @@ public class App {
             
 
             System.out.print("Opção:");
-            opcao = scan.nextInt();
+            opcao = scanner.nextInt();
             
 
             switch (opcao) {
                 case 1:
                 //
+
+                Contato contatos = new Contato();
+                
+                System.out.println("Insira o nome do contato");
+                contatos.setNome(scanner.next());
+
+                System.out.println("Insira o número");
+                contatos.setTelefone(scanner.next());
+
+                System.out.println("Insira o endereço de e-mail");
+                contatos.setEmail(scanner.next());
+
+                System.out.println();
+
                 break;
 
                 case 2:
@@ -44,6 +62,8 @@ public class App {
 
                 case 5:
                 //
+
+
                 break;
 
                 case 6:
@@ -55,4 +75,5 @@ public class App {
             }
         }
     }
+
 }
